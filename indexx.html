@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edgar Espina | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: #0f0f17;
+      color: #e0e0ff;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 25px;
+    }
+
+    header {
+      background: linear-gradient(to right, #1a0033, #330066);
+      padding: 120px 0 90px;
+      text-align: center;
+      border-bottom: 4px solid #7c3aed;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+      color: #d1d5ff;
+    }
+
+    header .subtitle {
+      font-size: 1.5rem;
+      color: #a0a0ff;
+      font-weight: 300;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.6rem;
+      margin-bottom: 50px;
+      color: #c4b5fd;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      width: 120px;
+      height: 5px;
+      background: #7c3aed;
+      position: absolute;
+      bottom: -18px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 3px;
+    }
+
+    .info {
+      background: #161624;
+      padding: 50px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      max-width: 800px;
+      margin: 0 auto 50px;
+    }
+
+    .info p {
+      font-size: 1.2rem;
+      margin: 15px 0;
+    }
+
+    .info strong {
+      color: #c4b5fd;
+    }
+
+    .objective {
+      background: #1e1e2e;
+      padding: 45px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(124, 58, 237, 0.15);
+      text-align: center;
+      font-size: 1.25rem;
+      font-style: italic;
+      color: #d1d5ff;
+      max-width: 900px;
+      margin: 0 auto 60px;
+      border-left: 6px solid #7c3aed;
+    }
+
+    .skills {
+      text-align: center;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .skill {
+      background: #4c1d95;
+      color: #e9d5ff;
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      box-shadow: 0 5px 15px rgba(124, 58, 237, 0.3);
+      transition: all 0.3s;
+    }
+
+    .skill:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(124, 58, 237, 0.5);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 35px;
+    }
+
+    .project-card {
+      background: #161624;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      transition: all 0.4s ease;
+      border: 1px solid #4c1d95;
+    }
+
+    .project-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 40px rgba(124, 58, 237, 0.25);
+      border-color: #a78bfa;
+    }
+
+    .project-content {
+      padding: 30px;
+    }
+
+    .project-content h3 {
+      color: #c4b5fd;
+      margin-bottom: 15px;
+      font-size: 1.6rem;
+    }
+
+    .project-content p {
+      color: #b0b0ff;
+      margin-bottom: 12px;
+    }
+
+    .contact {
+      background: linear-gradient(to bottom, #1a0033, #0f0f17);
+      text-align: center;
+      padding: 100px 20px;
+      border-top: 4px solid #7c3aed;
+    }
+
+    .contact h2 {
+      margin-bottom: 40px;
+    }
+
+    .contact p {
+      font-size: 1.3rem;
+      margin: 20px 0;
+    }
+
+    .contact a {
+      color: #a78bfa;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact a:hover {
+      color: #c4b5fd;
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #0a0a14;
+      color: #8888aa;
+      text-align: center;
+      padding: 40px;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.8rem; }
+      h2 { font-size: 2.2rem; }
+      .info { padding: 35px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Edgar Espina</h1>
+      <p class="subtitle">BS Information Technology • 3rd Year</p>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+
+      <div class="info">
+        <p><strong>Name:</strong> Edgar Espina</p>
+        <p><strong>Course:</strong> Bachelor of Science in Information Technology</p>
+        <p><strong>Year:</strong> 3rd Year</p>
+        <p><strong>Location:</strong> Cebu City, Philippines</p>
+      </div>
+
+      <div class="objective">
+        "Enthusiastic IT student focused on front-end web development using HTML and CSS. 
+        I enjoy creating clean, attractive, and fully responsive static websites with modern layouts. 
+        Looking for opportunities to build more projects, improve my styling skills, and contribute to simple web-based tasks."
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <span class="skill">HTML5</span>
+        <span class="skill">CSS3</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-content">
+            <h3>Personal Portfolio</h3>
+            <p>Single-page portfolio site with sections for about, skills, projects, and contact — styled with pure CSS including gradients and responsive design.</p>
+            <p><strong>Tech:</strong> HTML5, CSS3</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-content">
+            <h3>Product Landing Page</h3>
+            <p>Attractive landing page for a fictional product with hero section, features list, pricing cards, and footer — using Flexbox and media queries.</p>
+            <p><strong>Tech:</strong> HTML5, CSS3 (Flexbox + Grid)</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-content">
+            <h3>Responsive Image Gallery</h3>
+            <p>Simple photo gallery layout that adapts to mobile/tablet/desktop with hover zoom effects and CSS Grid for clean arrangement.</p>
+            <p><strong>Tech:</strong> HTML5, CSS3 (Grid + Transitions)</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Get In Touch</h2>
+      <p>
+        Email: <a href="mailto:andrewespina181@gmail.com">andrewespina181@gmail.com</a><br>
+        Phone: 09869067720<br>
+        GitHub: <a href="https://github.com/edgarespina" target="_blank">github.com/edgarespina</a>
+      </p>
+      <p style="margin-top: 50px; font-size: 1.2rem;">
+        Available for small HTML/CSS projects, practice collaborations, and learning together
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Edgar Espina • Built with HTML & CSS</p>
+  </footer>
+
+</body>
+</html>
